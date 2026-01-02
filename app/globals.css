@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 263 70% 50%;
+  --radius: 0.5rem;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --popover: 222 47% 11%;
+  --popover-foreground: 210 40% 98%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-[#0f172a] text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#1e293b];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#334155] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#475569];
+}
+
+/* Animações customizadas */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glassmorphism */
+.glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
+
+.glass-hover {
+  @apply hover:bg-white/10 transition-all duration-300;
+}
+
+/* Gradientes neurais */
+.bg-neural {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.text-neural {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
