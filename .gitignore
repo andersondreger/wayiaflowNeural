@@ -35,3 +35,8 @@ prisma/migrations
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# OpenNext/Cloudflare
+.open-next
+.dev.vars
+.wrangler
