@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { getServerSession } from 'next-auth'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { ExternalLink, Workflow, Crown, Lock } from 'lucide-react'
