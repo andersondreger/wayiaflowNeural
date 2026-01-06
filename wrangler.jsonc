@@ -7,5 +7,9 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
+  },
+  "vars": {
+    "NEXTAUTH_URL": "https://wayia.com.br",
+    "NEXT_PUBLIC_APP_URL": "https://wayia.com.br"
   }
 }

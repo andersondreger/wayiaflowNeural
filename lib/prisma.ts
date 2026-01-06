@@ -2,10 +2,14 @@ import { Pool, neonConfig } from '@neondatabase/serverless'
 import { PrismaNeon } from '@prisma/adapter-neon'
 import { PrismaClient } from '@prisma/client'
 
-// Enable WebSocket for serverless environments
-neonConfig.useSecureWebSocket = true
+// Disable WebSocket for Cloudflare Workers (use HTTP fetch)
+neonConfig.webSocketConstructor = undefined
+neonConfig.useSecureWebSocket = false
 neonConfig.pipelineTLS = false
 neonConfig.pipelineConnect = false
+
+// Use fetch for HTTP connections in edge runtime
+neonConfig.poolQueryViaFetch = true
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined
