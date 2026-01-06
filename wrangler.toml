@@ -1,0 +1,9 @@
+name = "wayiaflowneural"
+compatibility_date = "2024-12-30"
+compatibility_flags = ["nodejs_compat"]
+
+pages_build_output_dir = ".open-next/assets"
+
+[vars]
+NEXTAUTH_URL = "https://wayia.com.br"
+NEXT_PUBLIC_APP_URL = "https://wayia.com.br"
